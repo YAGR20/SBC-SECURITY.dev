@@ -50,11 +50,21 @@
 <body>
     <div class="login-container">
         <h2>Bienvenido</h2>
-        <form method="post">
+        <form method="POST" action="{% url 'login' %}">
             {% csrf_token %}
-            <input type="text" name="username" placeholder="Usuario" required>
-            <input type="password" name="password" placeholder="Contraseña" required>
-            <button type="submit">Iniciar sesión</button>
+            <label for="id_username">Usuario:</label>
+            <input type="text" name="username" id="id_username" required>
+            
+            <label for="id_password">Contraseña:</label>
+            <input type="password" name="password" id="id_password" required>
+            
+            <button type="submit">Ingresar</button>
+            
+            {% if error %}
+              <p style="color:red;">{{ error }}</p>
+            {% endif %}
+        </form>
+        
         </form>
     </div>
 </body>

@@ -1,0 +1,4 @@
+fecha,ip,tipo_ataque,descripcion
+2025-04-10 10:00:00,192.168.1.10,SQL Injection,Intento de inyección en la base de datos.
+2025-04-10 10:05:00,192.168.1.15,Malware,Detección de malware en el sistema.
+
